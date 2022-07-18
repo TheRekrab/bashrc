@@ -54,11 +54,11 @@ reset_all="\[\033[00;00m\]"
 
 # For my bashrc, you can either have a long or short prompt, already created!
 if [[ $(id -u) -ne 0 ]];then
-    ShortPS1=$italics$purple"\u"$reset_style$blue" \W "$green"> "$reset_all
+    ShortPS1=$dull$red"->"$reset_style$italics$purple"\u"$reset_style$blue" \W "$green"> "$reset_all
 
     LongPS1=$grey"["$dull$orange"\d \@"$reset_style$grey"] ("$italics$purple"\u"$reset_style$grey" @ "$italics$red"\H"$reset_style$grey") - "$blue"\w"$green" > "$reset_all
 else
-    ShortPS1=$italics$red"\u"$reset_style$red" \W > "$reset_all
+    ShortPS1=$dull$red"->"$reset_style$italics$red"\u"$reset_style$red" \W > "$reset_all
     LongPS1=$grey"["$dull$red"\d \@"$reset_style$grey"] ("$italics$red"\u"$reset_style$red" @ "$italics"\H"$reset_style$grey")"$red" - \w > "$reset_all
 fi
 
